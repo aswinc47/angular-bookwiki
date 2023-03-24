@@ -1,0 +1,605 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap');
+
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Sacramento', cursive; */
+/* font-family: 'Jost', sans-serif */
+
+/* colors : #FFEA20,#FFF47D,#D8EFF0 */
+
+:root{
+    --backgroundgrey: rgb(249, 248, 248) ;
+    --yellow: #FFEA20;
+}
+
+@media (max-width: 1080px){
+    body{
+        width: 100vw;
+    }
+
+    body .navbar{
+        padding: 0em;
+        text-align: center;
+        height: 10vh;
+    }
+    .navbar-cont .navbar-brand{
+        padding-top: 0px;
+        margin-right: 0;
+        font-size: 1.3em;
+    }
+    .homeabout{
+        display: none;
+    }
+
+    body .hero-background{
+        padding: 0em;
+        height: auto;
+        min-height: 80vh;
+        margin-block: 1em;
+    }
+    .hero-background .hero{
+        padding-inline: 2em;
+        padding-top: 1em;
+    }
+
+    .hero-background .hero p{
+        margin-block-start: 0em;
+    }
+
+    .hero-background .hero h1{
+        font-size: 2.5em;
+        font-weight: 500;
+        margin-block-start: 0em;
+        margin-inline-start: 0px;
+    }
+
+    .hero-background .hero h4{
+        font-size: 1.1em;
+        margin-block-start: 0em;
+    }
+
+    .hero-background .search-group{
+        width: 100%;
+    }
+
+    .hero-background .hero-book{
+        padding-top: 2em;
+        padding-inline: 2em;
+        padding-bottom: 2em;
+    }
+
+    .hero-book-sec .hero-book-1{
+        width: 100%;
+        height: fit-content;
+    }
+
+    .hero-book-sec-2 .hero-book-card-sec{
+        margin-bottom: 0em;
+    }
+    .hero-book .hero-book-sec-2{
+        justify-content: center;
+    }
+
+    .hero-book-sec-2 .hero-book-2{
+        display: none;
+    }
+
+    .hero-book-card-sec .featured-book{
+        margin-bottom: 0.5em;
+    }
+
+    .hero-book-sec-2 .hero-book-card-sec p{
+        margin-top: 0.5em;
+    }
+
+    .navbar-cont{
+        flex-direction: column;
+    }
+    .navbar-search{
+        display: none !important;
+    }
+    .body-search{
+        display: flex !important;
+    }
+
+    body footer{
+        padding: 1em 2em;
+    }
+
+    .card-main .card{
+        width: 19em;
+    }
+
+    body .search-result-main{
+        padding-inline: 2em;
+        padding-top: 1em;
+    }
+    .search-result-main .card-main{
+        justify-content: center;
+    }
+
+    .card .card-body{
+        align-items: center;
+    }
+
+    body .book-detail{
+        padding-inline: 2em;
+        padding-top: 0em;
+        height: auto;
+        min-height: 80vh;
+        text-align: center;
+    }
+
+    .single-book-cover img{
+        width: 60%;
+    }
+
+    .row .single-book-cover{
+        text-align: center;
+        padding: 0;
+        margin-bottom: 1em;
+    }
+    .row .single-book-texts{
+        padding-top: 1em;
+    }
+    .about .about-sec1{
+        display: none;
+    }
+    .about .about-sec2{
+        text-align: center;
+        padding-inline: 2em;
+    }
+    .about-sec2 .aboutheader{
+        font-size: 1.5em;
+    }
+    body .about{
+        padding-top: 1em;
+    }
+    .about-sec2 .para{
+        margin-top: 1em;
+        font-size: 1.1em;
+    }
+
+
+}
+
+body{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Jost';
+    background-color: var(--backgroundgrey);
+}
+
+.navbar{
+    padding: 1em 9em;
+    background-color: var(--backgroundgrey) ;
+    align-items: center;
+    height:10vh
+}
+.navbar-cont{
+    padding: 0;
+}
+
+.navbar-brand{
+    font-weight: 700;
+    font-size: 1.5em;
+    /* padding-left: 4em; */
+    padding-bottom: 0px;
+    cursor: pointer;
+}
+
+.homeabout{
+    padding-right: 0em;
+}
+
+.homeabout a{
+    padding-left: 5em;
+    text-decoration: none;
+    color:black;
+    font-weight: 500;
+    font-size: 1.1em;
+    transition: all ease-in-out 0.5s;
+}
+
+.homeabout a:hover{
+    color: grey;
+}
+
+.hero-background{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--backgroundgrey);
+    padding-inline: 9em 3em;
+}
+
+.row{
+    margin: 0px;
+}
+
+.hero{
+    display:flex;
+    flex-direction: column;
+    padding-inline: 0em 5em;
+    padding-top: 6em;
+}
+
+.hero h1{
+    margin-bottom: 2.5rem;
+    font-size: 5em;
+    margin-inline-start: -2px;
+}
+
+.hero h1 span{
+    transition: all ease-in-out 0.5s;
+}
+
+.hero h4{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 2em;
+}
+
+
+
+/* .navbar-search{
+    align-items: center;
+    border-radius: 20px;
+} */
+/* 
+.search-icon{
+    padding-inline: 2em;
+} */
+/* .search-btn{
+    margin-inline: 15px;
+    background-color: rgb(130, 130, 203);
+    padding-inline: 10px;
+    border-radius: 15px;
+} */
+
+/* search */
+.search-group{
+    width: 65%;
+    text-align: end;
+}
+
+.search-group p{
+    font-size: 0.9em;
+    padding-right: 0.9em;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.search-main{
+    position: relative;
+    margin-block: 10px;
+    margin-left: -0.1em;
+}
+.search-icon{
+    position: absolute;
+    left: 1.1em; 
+    border: 0;
+    font-size: 1.1em;
+    background: #e91b7100;
+    color:black;
+    outline: none;
+    margin: 0;
+    border-radius: 100px;
+    z-index: 2;
+    top: 21%;
+}
+
+.search-inp{
+    width: 100%;
+    border-radius: 100px;
+    outline: none;
+    border: 0px;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 10px 70px 10px 70px;
+    background-color: var(--yellow);
+    line-height: 1;
+    color: black;
+    line-height: 1.7em;
+}
+
+.search-inp::placeholder{
+    color:rgb(97, 97, 97);
+}
+
+.search-btn{
+    position: absolute;
+    right: 0.4em; 
+    top: 0.4em;
+    bottom: 0.4em;
+    border: 0;
+    background-color: white;
+    color: black;
+    outline: none;
+    margin: 0;
+    padding: 0 0.6em;
+    border-radius: 100px;
+    z-index: 2;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all ease-in-out 0.5s;
+}
+
+.search-btn:hover{
+    color: white;
+    background-color: black;
+}
+
+
+.hero-book{
+    display: flex;
+    padding-top: 3em;
+}
+.hero-book-1{
+    width: 100%;
+    height: 85%;
+}
+.hero-book-sec-2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero-book-sec{
+    width: 50%;
+    display: flex;
+}
+
+.hero-book-2{
+    width: 70%;
+    margin-left: 2em;
+    /* padding-top: 5em; */
+}
+
+.hero-book-card-sec{
+    margin-bottom: 5em;
+    padding: 1.5em 2em;
+}
+
+.hero-book-card-sec h5{
+    /* font-style: italic; */
+    font-size: 0.8em;
+    margin-bottom: 0.3em;
+    font-weight: 400;
+}
+
+.featured-book{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 1.1 ;
+    display: block;
+}
+.featured-author{
+    text-decoration: none;
+    font-size: 0.85em;
+    color: black;
+}
+
+.hero-book-card-sec p{
+    font-size: 0.8em;
+    font-weight: 400;
+    margin: 0;
+}
+
+footer{
+    background-color: var(--backgroundgrey) ;
+    padding: 1em 8em 1em 9em;
+    height: 10vh;
+}
+
+.footer-api{
+    color: black;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+.footer-icon{
+    padding-left: 1.4em;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-icon:hover{
+    color: grey;
+}
+
+.footer-icons{
+    padding-right: 0em;
+}
+
+
+.body-search{
+    width: 75%;
+    margin: auto;
+    display: none;
+    flex-direction: row;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+
+
+/* Search results */
+
+.search-result-main{
+    background-color: var(--backgroundgrey);
+    padding-inline: 9em;
+    padding-top: 2em;
+    min-height: 80vh;
+}
+
+.search-result-header{
+    font-size: 1em;
+    color: black;
+    margin-bottom: 2em;
+}
+
+.card-main{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.card{
+    width: 13em;
+    margin-bottom: 2em;
+    padding-block: 1.3em;
+    align-items: center;
+    border-radius: 0;
+    border: 0;
+    transition: all ease-in-out 0.5s;
+}
+
+.card-img-top{
+    width:9em;
+}
+
+.card-body{
+    padding: 1.3em 1.3em 0em 1.3em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title{
+    font-size: 1em;
+    margin-bottom: 0.9em;
+}
+
+.card-author{
+    font-size: 0.8em;
+    line-height: 1;
+    margin-bottom: 0.4em;
+}
+
+
+.card-editions{
+    font-size: 0.8em;
+    line-height: 1;
+    margin-bottom: 0.4em;
+}
+
+.card-fpy{
+    font-size: 0.7em;
+    line-height: 1;
+    margin-bottom: 0.4em;
+    font-style: italic;
+}
+
+/* Single book details */
+.single-book-cover{
+    padding-block: 2em;
+}
+
+
+
+.book-detail{
+    background-color: var(--backgroundgrey);
+    padding: 2em 9em;
+    height: 80vh;
+}
+
+.single-book-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.single-book-texts span{
+    font-weight: 500;
+}
+
+.sb-title{
+    font-size: 1.7em;
+    overflow:hidden;
+    max-height: 4rem;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.changeSearch{
+    cursor: pointer;
+}
+.search-suggestion{
+    background-color: rgb(205, 205, 205);
+    position: fixed;
+    z-index: 5;
+    text-align: start;
+}
+.search{
+    position:relative;
+    padding-inline: 1em;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.search:hover{
+    background-color: var(--backgroundgrey);
+}
+
+.card-author:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card:hover{
+    box-shadow: 0px 7px 12px 2px #00000036;
+}
+
+.card-img-top:hover{
+    cursor: pointer;
+}
+
+.author:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hero:hover{
+    cursor:context-menu;
+}
+
+.hero:hover h1 span{
+    color: var(--yellow);
+}
+
+/* About */
+.about{
+    padding-block: 2em;
+    min-height: 80vh;
+}
+
+.aboutimg{
+    width: 75%;
+}
+.about-sec1{
+    padding-left: 9em;
+}
+
+.about-sec2{
+    padding-right: 18em;
+}
+.aboutheader{
+    font-size: 2em;
+}
+.para{
+    font-size: 1.2em;
+    margin-top: 2em;
+}

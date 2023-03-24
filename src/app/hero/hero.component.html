@@ -1,0 +1,39 @@
+<!-- Hero section -->
+<div class="hero-background row">
+    <div class="hero col-md-6">
+        <p>-------------- wikipedia for books</p>
+        <h1>explore<span>.</span>library</h1>
+        <h4>Not sure what to read next? Explore more</h4>
+        <!-- <form class="body-search" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+
+        <div class="search-group">
+            <div class="search-main">
+                <span [ngClass]="{hidden : this.ds.searchType } " class="search-icon"><i class="fa-solid fa-pen-nib"></i></span>
+                <span [ngClass]="{hidden : !this.ds.searchType }" class="search-icon"><i class="fa-solid fa-book"></i></span>
+                <input #bookname class="search-inp" (input)="getSuggestions(bookname.value)" type="text" placeholder="Search...">
+                <div class="search-suggestion" >
+                    <div class="search" *ngFor="let suggestion of this.ds.suggestions" (click)="search(suggestion,this.ds.searchType)">{{suggestion}}</div>
+                </div>
+                <button (click)="search(bookname.value,this.ds.searchType)"  class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <p class="changeSearch" (click)="changeSearch()" >search by {{this.ds.searchType ? 'author' : 'title' }} ? </p>
+        </div>
+    </div>
+    <div class="hero-book col-md-6">
+        <div class="hero-book-sec">
+            <img class="hero-book-1" src="/assets/images/81zpMszexTL_600x.jpg" alt="">
+        </div>
+        <div class="hero-book-sec-2">
+            <img class="hero-book-2" src="/assets/images/81E7Ymp_MuL_600x.jpg" alt="">
+            <div class="hero-book-card-sec">
+                <h5>------ Featured book</h5>
+                <a class="featured-book" href="" >The Seven Moons of Maali Almeida</a>
+                <a class="featured-author" >Shehan Karunatilaka</a>
+                <p>Booker Prize 2022</p>
+            </div>
+        </div>
+    </div>
+</div>

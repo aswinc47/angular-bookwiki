@@ -1,0 +1,15 @@
+<!-- Cards -->
+<section class="search-result-main">
+  <h3 class="search-result-header">SEARCH RESULTS...</h3>
+  <div class="card-main row">
+      <div *ngFor="let card of this.ds.searchResults" class="card col-md-3">
+          <img (click)="getBook(card.key,card.author,card.publisher,card.firstPublishDate)" src="{{card.imgUrl}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{card.title}}</h5>
+            <p class="card-author" (click)="getAuthorBooks(card.author)" >{{card.author}}</p>
+            <p class="card-editions">Total editions : {{card.totalEditions}}</p>
+            <p class="card-fpy">First publish year : {{card.firstPublishDate}}</p>
+          </div>
+      </div>
+  </div>
+</section> 

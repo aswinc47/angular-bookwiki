@@ -1,0 +1,18 @@
+<!-- Single details -->
+<section class="book-detail">
+    <div class="row">
+        <div class="col-md-4 single-book-cover">
+            <img src="{{this.ds.details.imgUrl}}" alt="" class="single-img">
+        </div>
+        <div class="col-md-8 single-book-texts">
+            <h2 class="sb-title">{{this.ds.details.title}}</h2>
+            <p class="author" (click)="getAuthorBooks(this.ds.details.author || '' )" ><span>Author:</span> {{this.ds.details.author}} </p>
+            <p class="publisher"><span>Publisher: </span>{{this.ds.details.publisher}}</p>
+            <p class="firstpublished"><span>First published: </span> {{this.ds.details.firstPublishDate}} </p>
+            <p class="description"><span>Description: </span> {{this.ds.details.description || "No description available" }} ...</p>
+            <p class="subject-places"><span>Subject places: </span> {{this.ds.details.subjectPlaces}}</p>
+            <p class="subject-time"><span>Subject time: </span>{{this.ds.details.subjectTime}}</p>
+            <p class="subject"><span>Subjects: </span>{{this.ds.details.subjects}} ...</p>
+        </div>
+    </div>
+</section>
